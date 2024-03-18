@@ -19,4 +19,8 @@ export class HomeComponent {
     this.meyveler.push(this.meyveAdi);
     this.meyveAdi="";
   }
+
+  role:string="admin";
+  show:boolean=false;
+  todos:string[]=["Example1","Example2","Example3"];
 }

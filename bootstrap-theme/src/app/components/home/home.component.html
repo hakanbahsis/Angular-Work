@@ -3,10 +3,10 @@
         <span class="fs-4">Home Page</span>
         <nav class="float-end" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item fs-4"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active fs-4" aria-current="page">Library</li>
+                <li class="breadcrumb-item fs-4"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active fs-4" aria-current="page">Library</li>
             </ol>
-          </nav>
+        </nav>
     </div>
 </div>
 
@@ -25,13 +25,48 @@
         <h6>For Döngüsü - ngFor</h6>
     </div>
     <div class="card-body">
-       <label for="">Meyve Adı : </label>
+        <label for="">Meyve Adı : </label>
         <input [(ngModel)]="meyveAdi">
         <button (click)="meyveEkle()">Meyveyi Ekle</button>
-     <ul>
-        <li *ngFor="let item of meyveler let i=index">
-          {{i+1}} - {{item}}
-        </li>
-     </ul>
+        <ul>
+            <li *ngFor="let item of meyveler let i=index">
+                {{i+1}} - {{item}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-header">
+        <h6>For Döngüsü </h6>
+    </div>
+    <div class="card-body">
+        @if (show) {
+            <h1>show</h1>
+        }@else {
+            <h1>Not show</h1>
+        }
+        @switch (role) {
+            @case ('admin') {
+                <h1>Admin role</h1>
+            }
+            @case ('user') {
+                <h1>User role</h1>
+            }
+            @default {
+                <h1>Rol bulunamadı</h1>
+            }
+        }
+        <ul>
+            @for (todo of todos; track todo) {
+            <li>
+                {{$index}} -- {{todo}}
+                <span *ngIf="$first"> - ilk kayıt</span>
+                <span *ngIf="$last"> - Son kayıt</span>
+            </li>
+            }@empty {
+                <h1>Listede kayıt bulunamadı.</h1>
+            }
+        </ul>
     </div>
 </div>
