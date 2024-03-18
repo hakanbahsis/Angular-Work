@@ -1,0 +1,13 @@
+
+<h1>Merhaba</h1>
+<h2>{{name}}</h2>
+<h2 [innerText]="name"></h2>
+<input type="text" [value]="name"><br>
+<button (click)="metot()">Tıkla</button><br>
+<input (keyup)="getValue()" id="name"><br>
+<input (keyup)="getValuee($event)" id="name"><br>
+<input id="nameChild" #nameChild (keyup)="getValueChild()"><br>
+<input id="mName" [(ngModel)]="mName"><br>
+<button (click)="getNameValue()">Tıkla</button>
+
+<button class="btn btn-success">Tıkla</button>
