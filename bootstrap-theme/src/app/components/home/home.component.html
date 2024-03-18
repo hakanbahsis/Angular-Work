@@ -15,6 +15,7 @@
         <h6>Ürün Listesi</h6>
     </div>
     <div class="card-body">
-        
+        <button *ngIf="!isActive" (click)="changeActiveStatus()">Aktif Et</button>
+        <button *ngIf="isActive" (click)="changeActiveStatus()">Pasif Et</button>
     </div>
 </div>
