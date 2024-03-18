@@ -19,3 +19,19 @@
         <button *ngIf="isActive" (click)="changeActiveStatus()">Pasif Et</button>
     </div>
 </div>
+
+<div class="card mt-4">
+    <div class="card-header">
+        <h6>For Döngüsü - ngFor</h6>
+    </div>
+    <div class="card-body">
+       <label for="">Meyve Adı : </label>
+        <input [(ngModel)]="meyveAdi">
+        <button (click)="meyveEkle()">Meyveyi Ekle</button>
+     <ul>
+        <li *ngFor="let item of meyveler let i=index">
+          {{i+1}} - {{item}}
+        </li>
+     </ul>
+    </div>
+</div>

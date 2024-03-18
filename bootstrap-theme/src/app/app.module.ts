@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/layouts/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './router';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,//ngModule
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],

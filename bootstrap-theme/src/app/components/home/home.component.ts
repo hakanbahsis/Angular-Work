@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  isActive:boolean=true;
+  isActive: boolean = true;
 
-  changeActiveStatus(){
-    this.isActive=!this.isActive;
+  changeActiveStatus() {
+    this.isActive = !this.isActive;
+  }
+
+  meyveAdi:string="";
+  meyveler: string[] = ["Elma", "Armut", "Ayva"];
+
+  meyveEkle(){
+    this.meyveler.push(this.meyveAdi);
+    this.meyveAdi="";
   }
 }
